@@ -14,6 +14,13 @@ class dotfiles {
     require => File[$my]
   }
 
+  file { "${home}/.gitconfig":
+    ensure => "link",
+    target => "${my}/dotfiles/gitconfig",
+    require => Repository[$dotfiles]
+  }
+
+
   file { "${home}/.zsh":
     ensure => "link",
     target => "${my}/dotfiles/zsh",
