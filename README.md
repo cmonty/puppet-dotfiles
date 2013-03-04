@@ -1,21 +1,18 @@
-# Template Puppet Module for Boxen
+# Dotfiles
 
-An example of how we write Puppet modules for Boxen. Replace this
-paragraph with a short explanation of what the heck makes your module
-useful.
+Puppet module to include my dotfiles when using boxen.
 
 ## Usage
 
 ```puppet
 boxen::example { 'best example ever':
-  salutation => 'fam'
+  include dotfiles
 }
 ```
 
 ## Required Puppet Modules
 
 * `boxen`
-* `anything-else`
 
 ## Development
 
