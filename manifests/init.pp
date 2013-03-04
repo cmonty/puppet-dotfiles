@@ -16,7 +16,7 @@ class dotfiles {
 
   exec { "cp -r ${dotfiles}/fonts/SourceCodePro ${home}/Library/Fonts/SourceCodePro":
     creates => "${home}/Library/Fonts/SourceCodePro",
-    require => File[$my]
+    require => Repository[$dotfiles]
   }
 
   file { "${home}/.gitconfig":
