@@ -14,40 +14,44 @@ class dotfiles {
     require => File[$my]
   }
 
+  exec { "cp -r ${dotfiles}/fonts/SourceCodePro ${home}/Library/Fonts/SourceCodePro":
+    creates => "${home}/Library/Fonts/SourceCodePro",
+    require => File[$my]
+  }
+
   file { "${home}/.gitconfig":
     ensure => "link",
-    target => "${my}/dotfiles/gitconfig",
+    target => "${dotfiles}/gitconfig",
     require => Repository[$dotfiles]
   }
 
-
   file { "${home}/.zsh":
     ensure => "link",
-    target => "${my}/dotfiles/zsh",
+    target => "${dotfiles}/zsh",
     require => Repository[$dotfiles]
   }
 
   file { "${home}/.zshrc":
     ensure => "link",
-    target => "${my}/dotfiles/zshrc",
+    target => "${dotfiles}/zshrc",
     require => Repository[$dotfiles]
   }
 
   file { "${home}/.tmux.conf":
     ensure => "link",
-    target => "${my}/dotfiles/tmux.conf",
+    target => "${dotfiles}/tmux.conf",
     require => Repository[$dotfiles]
   }
 
   file { "${home}/.vimrc":
     ensure => "link",
-    target => "${my}/dotfiles/vimrc",
+    target => "${dotfiles}/vimrc",
     require => Repository[$dotfiles]
   }
 
   file { "${home}/.vim":
     ensure => "link",
-    target => "${my}/dotfiles/vim",
+    target => "${dotfiles}/vim",
     require => Repository[$dotfiles]
   }
 }
