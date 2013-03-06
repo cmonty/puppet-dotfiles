@@ -46,8 +46,6 @@ class dotfiles {
     "alias.staged": value  => "diff --staged";
     "user.name": value => "cory";
     "user.email": value => "cory.monty@gmail.com";
-    "credential.helper": value => "/opt/boxen/bin/boxen-git-credential";
-    "core.excludesfile": value => "/opt/boxen/config/git/gitignore";
   }
 
   file { "${home}/.vimrc":
