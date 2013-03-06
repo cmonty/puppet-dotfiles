@@ -54,8 +54,4 @@ class dotfiles {
     target => "${dotfiles}/vim/colors",
     require => Repository[$dotfiles]
   }
-
-  file { "${home}/.vim":
-    ensure => "absent"
-  }
 }
