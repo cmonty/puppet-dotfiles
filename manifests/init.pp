@@ -57,13 +57,13 @@ class dotfiles {
     require => Repository[$dotfiles]
   }
 
-  vim::bundle { "https://github.com/benmills/vimux": }
-  vim::bundle { "https://github.com/c9s/bufexplorer": }
-  vim::bundle { "https://github.com/kien/ctrlp.vim": }
-  vim::bundle { "https://github.com/rodjek/vim-puppet": }
-  vim::bundle { "https://github.com/scrooloose/nerdtree": }
-  vim::bundle { "https://github.com/tomtom/tcomment_vim": }
-  vim::bundle { "https://github.com/tpope/vim-rails": }
-  vim::bundle { "https://github.com/vim-ruby/vim-ruby": }
-  vim::bundle { "https://github.com/vim-scripts/Align": }
+  vim::bundle { "benmills/vimux": }
+  vim::bundle { "c9s/bufexplorer": }
+  vim::bundle { "kien/ctrlp.vim": }
+  vim::bundle { "rodjek/vim-puppet": }
+  vim::bundle { "scrooloose/nerdtree": }
+  vim::bundle { "tomtom/tcomment_vim": }
+  vim::bundle { "tpope/vim-rails": }
+  vim::bundle { "vim-ruby/vim-ruby": }
+  vim::bundle { "vim-scripts/Align": }
 }
