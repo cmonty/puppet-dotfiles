@@ -37,17 +37,6 @@ class dotfiles {
     require => Repository[$dotfiles]
   }
 
-  git::config::global { 
-    "color.ui": value  => "auto";
-    "alias.ci": value  => "commit";
-    "alias.co": value  => "checkout";
-    "alias.st": value  => "status";
-    "alias.br": value  => "branch";
-    "alias.staged": value  => "diff --staged";
-    "user.name": value => "cory";
-    "user.email": value => "cory.monty@gmail.com";
-  }
-
   file { "${home}/.vimrc":
     ensure => "link",
     target => "${dotfiles}/vimrc",
