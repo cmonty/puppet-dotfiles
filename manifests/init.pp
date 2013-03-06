@@ -49,9 +49,13 @@ class dotfiles {
     require => Repository[$dotfiles]
   }
 
-  file { "${home}/.vim":
+  file { "${home}/.vim/colors":
     ensure => "link",
-    target => "${dotfiles}/vim",
+    target => "${dotfiles}/vim/colors",
     require => Repository[$dotfiles]
+  }
+
+  file { "${home}/.vim":
+    ensure => "absent"
   }
 }
