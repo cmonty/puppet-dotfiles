@@ -1,4 +1,6 @@
 class dotfiles {
+  require vim
+
   $home = "/Users/${::luser}"
   $my = "${home}/my"
   $dotfiles = "${my}/dotfiles"
@@ -54,4 +56,14 @@ class dotfiles {
     target => "${dotfiles}/vim/colors",
     require => Repository[$dotfiles]
   }
+
+  vim::bundle { "benmills/vimux": }
+  vim::bundle { "c9s/bufexplorer": }
+  vim::bundle { "kien/ctrlp.vim": }
+  vim::bundle { "rodjek/vim-puppet": }
+  vim::bundle { "scrooloose/nerdtree": }
+  vim::bundle { "tomtom/tcomment_vim": }
+  vim::bundle { "tpope/vim-rails": }
+  vim::bundle { "vim-ruby/vim-ruby": }
+  vim::bundle { "vim-scripts/Align": }
 }
