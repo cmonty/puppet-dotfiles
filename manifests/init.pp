@@ -19,6 +19,12 @@ class dotfiles {
     require => Repository[$dotfiles]
   }
 
+  file { "${home}/.bin":
+    ensure => "link",
+    target => "${dotfiles}/bin",
+    require => Repository[$dotfiles]
+  }
+
   file { "${home}/.zsh":
     ensure => "link",
     target => "${dotfiles}/zsh",
