@@ -37,6 +37,12 @@ class dotfiles {
     require => Repository[$dotfiles]
   }
 
+  file { "${home}/.gitignore":
+    ensure => "link",
+    target => "${dotfiles}/gitignore",
+    require => Repository[$dotfiles]
+  }
+
   file { "${home}/.vimrc":
     ensure => "link",
     target => "${dotfiles}/vimrc",
